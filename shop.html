@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kittoworks - 画像販売</title>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2587055740442325"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+<script>
+  function filterCategory(category) {
+    const cards = document.querySelectorAll('.product-card, .image-set'); // ← ここが修正ポイント
+
+    cards.forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</head>
+<body>
+  <header class="hero">
+    <h1>画像販売</h1>
+    <p>カテゴリーで絞ってお気に入りを見つけよう！</p>
+    <p>オーダーメイドも受付中！</p>
+    <p>📩 お問い合わせ・ご依頼はこちらから：<br>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScMeA9Bjhoul8Qyi3VgJlbSiNm4qh06AP1uqTQx_Y0C_emihw/viewform?usp=header" target="_blank">▶ Googleフォームを開く</a></p>
+<a href="price.html">価格表</a>
+
+    <div class="shop-info">
+ <h3 class="white-heading">納品について</h3>
+  <p>納品方法はDMまたはメールとなります。</p>
+  <p>画像はご購入後、<strong>当日〜翌日</strong>を目安に納品いたします。</p>
+  <p>オーダーメイド画像についてはは<strong>購入前要相談</strong>とさせて頂きます。あらかじめご了承ください。</p>
+    </div>
+
+    <a href="terms.html" target="_blank">利用規約</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="app.html">アプリ紹介</a></li>
+      <li><a href="gallery.html">生成画像</a></li>
+      <li><a href="works.html">ポートフォリオ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  </header>
+
+
+    <main>
+    <div class="category-menu">
+      <button onclick="filterCategory('all')">すべて</button>
+      <button onclick="filterCategory('character')">キャラ</button>
+      <button onclick="filterCategory('landscape')">風景</button>
+      <button onclick="filterCategory('scifi')">SF</button>
+      <button onclick="filterCategory('animal')">動物</button>
+      <button onclick="filterCategory('lifestyle')">日常</button>
+      <button onclick="filterCategory('stained')">ステンドグラス</button>
+    </div>
+
+    <section class="product-gallery">
+      <div class="product-card" data-category="animal">
+        <img src="images/seinarukedama.jpg" alt="動物１">
+        <h3>聖なる毛玉たち - Sacred Paws</h3>
+        <p>商用利用可</p>
+      </div>
+ <div class="image-set" data-category="animal">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/neko1.jpg" alt="動物2">
+   <img src="images/neko2.jpg" alt="動物3">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/neko3.jpg" alt="動物4">
+  <img src="images/neko4.jpg" alt="動物5">
+  </div>
+ <h3>猫たちの祝宴 〜幸せはお皿の上に〜</h3>
+   <p>「にゃん生で一番うまい日ニャ！」<br>今日の主役はぽっちゃり猫たち。<br>笑顔はじける食卓に、豪華なごちそうがズラリ。<br>人間と猫が一緒に笑って味わう、しあわせのワンシーン。<br>商用利用可</p>
+</div> 
+<div class="image-set" data-category="animal">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+    <img src="images/gotineko1.jpg" alt="動物6">
+    <img src="images/gotineko2.jpg" alt="動物7">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+    <img src="images/gotineko3.jpg" alt="動物8">
+    <img src="images/gotineko4.jpg" alt="動物9">
+  </div>
+ <h3>ごちそうは笑顔のスパイス</h3>
+   <p>今日の晩餐は、王様レベルのステーキディナー。<br>お肉の香りにニャ顔全開、誰よりも幸せそうな表情。<br>この一口のために生きてるニャ……！<br>——こんなに幸せそうなディナー、見たことある？<br>商用利用可</p>
+</div>
+ <div class="image-set" data-category="animal">
+ 
+  <p>以下の2枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/neonkyato1.jpg" alt="動物10">
+ <img src="images/neonkyato2.jpg" alt="動物11">
+  </div>
+ <h3>ネオンキャット</h3>
+   <p>光と色彩の狭間から現れた、不思議なネオンキャット。<br>君の視線を捕らえて離さない、その瞳に引き込まれる──。🐾🌈<br>商用利用可</p>
+</div> 
+      
+      
+<div class="image-set" data-category="landscape">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+    <img src="images/neon1.jpg" alt="風景1">
+    <img src="images/neon2.jpg" alt="風景2">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+    <img src="images/neon3.jpg" alt="風景3">
+    <img src="images/neon4.jpg" alt="風景4">
+  </div>
+ <h3>孤独なスピード、雨に濡れる都市</h3>
+</div>
+
+ <div class="image-set" data-category="landscape">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+    <img src="images/gekou1.jpg" alt="風景5">
+   <img src="images/gekou2.jpg" alt="風景6">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/gekou3.jpg" alt="風景7">
+  <img src="images/gekou4.jpg" alt="風景8">
+  </div>
+ <h3>君と歩いた月の森</h3>
+ <p>二人の少女と月夜の森/商用利用可</p>
+</div>
+
+ <div class="image-set" data-category="landscape">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/abura1.jpg" alt="風景9">
+  <img src="images/abura2.jpg" alt="風景10">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/abura3.jpg" alt="風景11">
+  <img src="images/abura4.jpg" alt="風景12">
+  </div>
+ <h3>陽光の町 - The Town in the Sun</h3>
+  <p>商用利用可</p>
+</div>
+ <div class="image-set" data-category="landscape">
+ 
+  <p>以下の8枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/siro1.jpg" alt="風景13">
+  <img src="images/siro7.jpg" alt="風景14">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/siro3.jpg" alt="風景15">
+ </div>
+
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/siro5.jpg" alt="風景17">
+  <img src="images/siro6.jpg" alt="風景18">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/siro2.jpg" alt="風景19">
+  <img src="images/siro8.jpg" alt="風景20">
+  </div>
+<div class="image-row">
+  <img src="images/siro4.jpg" alt="風景16">
+  </div>
+ <h3>月と星に導かれて、夢の城へ</h3>
+  <p>星の海を旅するように歩いた先に現れた、幻想の城。<br>月の光が静かに照らし、夜空に浮かぶように佇むその姿は、<br>まるでおとぎ話の世界そのもの。<br>——これは、まだ誰も知らない魔法の扉の前での一夜の記憶。<br>商用利用可</p>
+</div>
+ <div class="image-set" data-category="landscape">
+ 
+  <p>以下の2枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/umi1.jpg" alt="風景21">
+ <img src="images/umi2.jpg" alt="風景22">
+  </div>
+ <h3>光のラグーン、夢が目を覚ます場所</h3>
+   <p>夜明けとともに、ラグーンが目を覚ます。<br>揺れる魚の群れ、透き通る水面、そして差し込む光のベール。<br>ここは現実と幻想の狭間に存在する、<br>“心が洗われるような朝”をくれる秘密の場所。<br>商用利用可</p>
+</div> 
+      
+      
+ <div class="image-set" data-category="character">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/kyara1.jpg" alt="キャラ１">
+   <img src="images/kyara2.jpg" alt="キャラ2">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/kyara3.jpg" alt="キャラ3">
+  <img src="images/kyara4.jpg" alt="キャラ4">
+  </div>
+ <h3>Override - 夜を制圧せよ</h3>
+   <p>	主導権を握る者のイメージ/商用利用可</p>
+</div> 
+
+<div class="product-card" data-category="character">
+  <img src="images/kyara5.jpg" alt="キャラ5">
+  <h3>都市の狭間で</h3>
+  <p>“静けさの中で、彼女の意志は街を貫く電流のようだった。”/商用利用可</p>
+</div>
+<div class="product-card" data-category="character">
+  <img src="images/kyara6.jpg" alt="キャラ6">
+  <h3>座標ゼロの女</h3>
+  <p>デュアルモニター前×強い視線×脚組み/商用利用可</p>
+</div>
+<div class="product-card" data-category="character">
+  <img src="images/kyara7.jpg" alt="キャラ7">
+  <h3>放課後の反抗</h3>
+  <p>昼間の教室風×赤椅子×冷静な視線/商用利用可</p>
+  </div>
+      
+ <div class="image-set" data-category="character">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/namida1.jpg" alt="キャラ8">
+   <img src="images/namida2.jpg" alt="キャラ9">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/namida3.jpg" alt="キャラ10">
+  <img src="images/namida4.jpg" alt="キャラ11">
+  </div>
+ <h3>君の涙か、雨か。</h3>
+   <p>彼女はただ、雨の中に立っていた。<br>濡れた髪、光を映す瞳、肌を滑るしずく。<br>静寂の中で何を思い、何を見つめているのか。<br>この瞬間は、まるでフィルムの一コマのように美しい——。<br>商用利用可</p>
+</div>   
+ <div class="image-set" data-category="character">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/gin1.jpg" alt="キャラ12">
+   <img src="images/gin2.jpg" alt="キャラ13">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/gin3.jpg" alt="キャラ14">
+  <img src="images/gin4.jpg" alt="キャラ15">
+  </div>
+ <h3>冷静と情熱の狭間で。</h3>
+   <p>冷たい眼差しの奥に秘めたものは、過去か、未来か。<br>誰もが信頼を寄せるエースドクター。<br>その白衣に込めた覚悟は、ただの理論では語れない。<br>——彼の視線が貫くのは、真実だけ。<br>商用利用可</p>
+</div> 
+ <div class="image-set" data-category="character">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/otona1.jpg" alt="キャラ16">
+   <img src="images/otona2.jpg" alt="キャラ17">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/otona3.jpg" alt="キャラ18">
+  <img src="images/otona4.jpg" alt="キャラ19">
+  </div>
+ <h3>大人の魅力</h3>
+   <p>静かな午後、柔らかな光の中で微笑む彼女。<br>部屋に差し込む日差しさえ、彼女の魅力を引き立てる──。<br>商用利用可</p>
+</div> 
+      
+ <div class="image-set" data-category="scifi">
+ 
+  <p>以下の2枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/kami1.jpg" alt="sf1">
+ <img src="images/kami2.jpg" alt="sf2">
+  </div>
+ <h3>降臨 - Descent of Light</h3>
+   <p>創造と始まりを連想させる/商用利用可</p>
+</div> 
+ <div class="image-set" data-category="scifi">
+ 
+  <p>以下の4枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/sironeko1.jpg" alt="sf3">
+   <img src="images/sironeko2.jpg" alt="sf4">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/sironeko3.jpg" alt="sf5">
+  <img src="images/sironeko4.jpg" alt="sf6">
+  </div>
+ <h3>お墓とかわいいゴースト猫たち</h3>
+   <p>商用利用可</p>
+</div> 
+ <div class="image-set" data-category="scifi">
+ 
+  <p>以下の2枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/saibougu1.jpg" alt="sf7">
+ <img src="images/saibougu2.jpg" alt="sf8">
+  </div>
+ <h3>ネオン×サイバーパンク風サイボーグアート</h3>
+   <p>紫電のような視線、緻密な回路に宿る意志。<br>このサイボーグは"未来"か、それとも"警告"か──。<br>商用利用可</p>
+</div> 
+<div class="product-card" data-category="scifi">
+  <img src="images/robo1.jpg" alt="sf9">
+  <h3>錆びたロボット</h3>
+  <p>錆びたボディに染みついた、過去と煙とニヒリズム。<br>レトロな車の中、ただ一人煙をくゆらせるこのロボットに、なぜか共感してしまう。<br>商用利用可</p>
+  </div>
+      
+      
+ <div class="image-set" data-category="lifestyle">
+ 
+  <p>以下の3枚の中から、お好きな1枚をお選びいただけます。</p>
+
+  <!-- 1段目 -->
+  <div class="image-row">
+  <img src="images/sizuku1.jpg" alt="日常1">
+  <img src="images/sizuku2.jpg" alt="日常2">
+  </div>
+
+  <!-- 2段目 -->
+  <div class="image-row">
+  <img src="images/sizuku3.jpg" alt="日常3">
+  </div>
+ <h3>紫雨の葉 - Violet Rainleaf</h3>
+   <p>	主導権を握る者のイメージ/商用利用可</p>
+</div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 kittoworks. All rights reserved.</p>
+  </footer>
+</body>
+</html>
