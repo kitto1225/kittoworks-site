@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>LP販売 | kittoworks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI × WebデザインのLPテンプレート販売。プレビュー確認後、そのまま問い合わせ（DM/メール）で購入・依頼できます。" />
+
+  <!-- OGP / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LP販売 | kittoworks" />
+  <meta property="og:description" content="AI × WebデザインのLPテンプレート販売。プレビュー確認後、そのまま問い合わせ（DM/メール）で購入・依頼できます。" />
+  <meta property="og:image" content="/images/ogp_lp.jpg" />
+  <meta property="og:url" content="https://kittoworks-site.vercel.app/works.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 追記（カード/CTAの最小スタイル） */
+    .hero{ text-align:center; padding:64px 20px; background:#111; color:#fff;
+      background-image:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.65)),url('/images/hero_lp.jpg');
+      background-size:cover; background-position:center}
+    .hero h1{ font-size:clamp(28px,4vw,44px); margin:0 0 8px}
+    .hero p{ opacity:.9; margin:0 0 20px}
+    .cta-row{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+    .btn-solid,.btn-ghost{ display:inline-block; padding:12px 18px; text-decoration:none; border-radius:999px; font-weight:700}
+    .btn-solid{ background:#fff; color:#111}
+    .btn-ghost{ border:1.5px solid #fff; color:#fff}
+
+    .section{ padding:48px 20px; max-width:1100px; margin:0 auto}
+    .templates{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px}
+    .card{ background:#fff; border-radius:16px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:10px}
+    .card img{ width:100%; height:auto; border-radius:12px}
+    .card h3{ margin:6px 0 2px; font-size:18px}
+    .card p.small{ color:#666; font-size:14px; margin:0 0 6px}
+    .card ul{ margin:0 0 8px 18px}
+    .card .price{ font-weight:700; margin:4px 0 10px}
+    .card .actions{ display:flex; gap:10px; flex-wrap:wrap}
+    .btn{ display:inline-block; padding:10px 14px; border-radius:999px; text-decoration:none; border:1px solid #111}
+    .btn.buy{ background:#111; color:#fff; border-color:#111}
+    .btn.mail{ border-color:#888; color:#111}
+
+    header{ display:flex; align-items:center; justify-content:space-between; padding:14px 20px; max-width:1100px; margin:0 auto}
+    header .logo a{ font-weight:800; font-size:18px; color:#111; text-decoration:none}
+    nav a{ margin-left:14px; text-decoration:none; color:#111}
+    nav a.active{ font-weight:800; text-decoration:underline; text-underline-offset:6px}
+    footer{ padding:36px 20px; color:#666; text-align:center}
+
+    .floating-cta{ position:fixed; right:12px; bottom:12px; z-index:9999;
+      padding:.9em 1.1em; border-radius:999px; background:#111; color:#fff; font-weight:700; text-decoration:none; box-shadow:0 6px 16px rgba(0,0,0,.15)}
+    @media(min-width:768px){ .floating-cta{ right:20px; bottom:20px } }
+  </style>
+</head>
+<body>
+  <!-- 共通ヘッダー -->
+  <header>
+    <div class="logo"><a href="index.html">kittoworks</a></div>
+    <nav>
+      <a class="active" href="works.html">LP販売</a>
+      <a href="shop.html">生成画像</a>
+      <a href="price.html">価格表</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <h1>あなたの“伝えたい”を、売れるLPに。</h1>
+    <p>AI × WebデザインのLPテンプレート。プレビューで確認 → そのままDM/メールで購入・依頼できます。</p>
+    <div class="cta-row">
+      <a class="btn-solid" href="#templates">LPテンプレを見る</a>
+      <a class="btn-ghost" href="contact.html">依頼する（問い合わせ）</a>
+    </div>
+  </section>
+
+  <!-- ラインナップ -->
+  <main class="section" id="templates">
+    <h2 style="margin-bottom:10px;">テンプレート一覧</h2>
+    <p class="small" style="color:#666;margin-top:0;">※購入は「お問い合わせ」または「メール相談」から受け付けています。価格・商用範囲は価格表と利用規約をご確認ください。</p>
+
+    <div class="templates">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="/images/lp_prompt_cover.webp" alt="ChatGPTプロンプト販売LP" loading="lazy" />
+        <h3>ChatGPTプロンプト販売LP</h3>
+        <p class="small">AIプロンプトの内容・用途・価格を簡潔に提示。個人販売に最適。</p>
+        <ul>
+          <li>Hero／ベネフィット／導入例／FAQ／CTA</li>
+          <li>フォーム連携（Googleフォーム等）</li>
+          <li>軽量・モバイル最適化</li>
+        </ul>
+        <p class="price">参考価格：¥3,000（商用OK・1ドメイン）</p>
+        <div class="actions">
+          <a class="btn" href="portfolio_lp.html" target="_blank" rel="noopener">プレビュー</a>
+          <a class="btn buy" href="contact.html">購入・相談（問い合わせ）</a>
+          <a class="btn mail" href="mailto:kitto1225.helpdesk@gmail.com?subject=LPテンプレ購入相談（プロンプト販売LP）&body=以下をご記入ください。%0D%0A%0D%0Aお名前：%0D%0Aご希望（購入/カスタム依頼）：%0D%0A用途/ドメイン：%0D%0A納期希望：%0D%0Aその他：">メールで相談</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="/images/lp_video_script_cover.webp" alt="動画台本LP" loading="lazy" />
+        <h3>動画台本LP</h3>
+        <p class="small">ショート動画台本の見本・用途・価格を明示。即相談→発注までスムーズ。</p>
+        <ul>
+          <li>見本台本（冒頭抜粋）掲載エリア</li>
+          <li>用途例／構成の説明／FAQ</li>
+          <li>［問い合わせ］と［メール相談］の2導線</li>
+        </ul>
+        <p class="price">参考価格：¥3,500（商用OK・1ドメイン）</p>
+        <div class="actions">
+          <a class="btn" href="video-script-lp.html" target="_blank" rel="noopener">プレビュー</a>
+          <a class="btn buy" href="contact.html">購入・相談（問い合わせ）</a>
+          <a class="btn mail" href="mailto:kitto1225.helpdesk@gmail.com?subject=LPテンプレ購入相談（動画台本LP）&body=以下をご記入ください。%0D%0A%0D%0Aお名前：%0D%0Aご希望（購入/カスタム依頼）：%0D%0A用途/ドメイン：%0D%0A納期希望：%0D%0Aその他：">メールで相談</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="/images/lp_twilight_cover.webp" alt="Twilight – アプリ/サービス紹介LP" loading="lazy" />
+        <h3>Twilight – アプリ/サービス紹介LP</h3>
+        <p class="small">機能・料金・FAQ・CTAで“迷いゼロ”。スマホで見やすい情報設計。</p>
+        <ul>
+          <li>Hero／機能ハイライト／レビュー／料金／FAQ／CTA</li>
+          <li>Vercel即デプロイ</li>
+          <li>Webフォント最小化で高速</li>
+        </ul>
+        <p class="price">参考価格：¥4,000（商用OK・1ドメイン）</p>
+        <div class="actions">
+          <a class="btn" href="demo/twilight" target="_blank" rel="noopener">プレビュー</a>
+          <a class="btn buy" href="contact.html">購入・相談（問い合わせ）</a>
+          <a class="btn mail" href="mailto:kitto1225.helpdesk@gmail.com?subject=LPテンプレ購入相談（Twilight）&body=以下をご記入ください。%0D%0A%0D%0Aお名前：%0D%0Aご希望（購入/カスタム依頼）：%0D%0A用途/ドメイン：%0D%0A納期希望：%0D%0Aその他：">メールで相談</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- 補足情報 -->
+    <section style="margin-top:32px;">
+      <h3>購入前に知っておきたいこと</h3>
+      <ul>
+        <li>商用利用可／再配布・再販は不可（詳細は <a href="terms.html">利用規約</a> へ）。</li>
+        <li>1ドメイン1ライセンス。追加ドメインは別途ライセンスをご購入ください。</li>
+        <li>カスタム対応・構成相談は <a href="contact.html">お問い合わせ</a> または <a href="mailto:kitto1225.helpdesk@gmail.com">メール</a> にて。</li>
+      </ul>
+      <p>価格の目安は <a href="price.html">価格表</a> をご覧ください。</p>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; <span id="y"></span> kittoworks — <a href="https://x.com/kitto_1225" target="_blank" rel="noopener">X</a> / <a href="https://instagram.com/kitto_1225works" target="_blank" rel="noopener">Instagram</a></p>
+  </footer>
+
+  <!-- スマホの常時CTA -->
+  <a class="floating-cta" href="contact.html">LPの相談をする</a>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <!-- 構造化データ（例：Card 1） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"ChatGPTプロンプト販売LP",
+    "image":["https://kittoworks-site.vercel.app/images/lp_prompt_cover.webp"],
+    "description":"AIプロンプトを販売するための1ページLPテンプレート。",
+    "brand":{"@type":"Brand","name":"kittoworks"},
+    "offers":{"@type":"Offer","priceCurrency":"JPY","price":"3000","availability":"https://schema.org/InStock","url":"https://kittoworks-site.vercel.app/contact.html"}
+  }
+  </script>
+</body>
+</html>
