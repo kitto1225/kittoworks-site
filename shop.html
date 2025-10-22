@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* カテゴリメニュー */
+    
     .category-menu{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px;justify-content:center}
     .category-menu button{padding:8px 12px;border-radius:999px;border:1px solid #111;background:#fff;cursor:pointer}
     .category-menu button.is-active{background:#111;color:#fff}
 
-    /* ギャラリー */
+    
     .product-gallery{display:grid;gap:18px}
     @media(min-width:860px){.product-gallery{grid-template-columns:1fr 1fr}}
 
@@ -26,13 +26,13 @@
     .btn{display:inline-block;padding:9px 12px;border-radius:999px;text-decoration:none;border:1px solid #111;color:#111;background:#fff;font-weight:700}
     .btn.primary{background:#111;color:#fff}
 
-    /* 選択ハイライト */
+   
     .img-selectable{position:relative;cursor:pointer}
     .img-selectable .tick{position:absolute;right:8px;top:8px;background:#111;color:#fff;font-size:12px;padding:4px 6px;border-radius:999px;opacity:0;transition:.2s}
     .img-selected img{outline:3px solid #111;outline-offset:2px}
     .img-selected .tick{opacity:1}
 
-    /* 相談リストUI */
+   
     .cart-fab{position:fixed;right:14px;bottom:14px;z-index:9999;background:#111;color:#fff;border-radius:999px;padding:10px 14px;box-shadow:0 6px 16px rgba(0,0,0,.15);font-weight:700;text-decoration:none}
     .cart-fab small{opacity:.8;font-weight:400}
     .cart-panel{position:fixed;right:14px;bottom:64px;z-index:9998;width:min(92vw,360px);background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.12);padding:12px;display:none}
@@ -57,7 +57,7 @@
     </nav>
   </header>
 
-  <!-- ===== あなたのギャラリーここに貼り付け済み ===== -->
+  
   <main>
     <div class="category-menu">
       <button onclick="filterCategory('all')">すべて</button>
@@ -433,17 +433,17 @@
     <p>&copy; 2025 kittoworks. All rights reserved.</p>
   </footer>
 
-  <!-- ===== 自動化スクリプト ===== -->
+  
   <script>
     const EMAIL_TO = "kitto1225.helpdesk@gmail.com";
     const $ = (s, el=document)=>el.querySelector(s);
     const $$ = (s, el=document)=>[...el.querySelectorAll(s)];
     const slug = s=>(s||"").trim().toLowerCase().replace(/[^\w\-ぁ-んァ-ヶ一-龠]/g,'-');
 
-    // 遅延読み込み
+    
     document.addEventListener("DOMContentLoaded",()=>{$$('img').forEach(i=>i.loading='lazy');});
 
-    // カテゴリ切替
+    
     function filterCategory(cat){
       const items=$$('.product-gallery [data-category]');
       items.forEach(el=>{
@@ -456,7 +456,7 @@
       window.scrollTo({top:document.querySelector('.category-menu').offsetTop-8,behavior:'smooth'});
     }
 
-    // 画像選択
+    
     function makeImagesSelectable(){
       $$('.image-set .image-row img').forEach(img=>{
         if(!img.parentElement.classList.contains('img-selectable')){
@@ -476,7 +476,7 @@
       });
     }
 
-    // actions自動追加
+    
     function ensureActions(){
       const blocks=$$('.product-card,.image-set');
       blocks.forEach(block=>{
@@ -497,7 +497,7 @@
       });
     }
 
-    // 相談リスト
+    
     const CART_KEY='kw_shop_cart';
     const cart={items:JSON.parse(localStorage.getItem(CART_KEY)||'[]'),save(){localStorage.setItem(CART_KEY,JSON.stringify(this.items));renderCart();}};
     function addToCart(it){if(!cart.items.some(x=>x.sku===it.sku)){cart.items.push(it);cart.save();}else alert('すでに追加済みです');}
@@ -537,3 +537,4 @@
   </script>
 </body>
 </html>
+
