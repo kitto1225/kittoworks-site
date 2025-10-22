@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LP販売・制作実績｜kittoworks</title>
+  <meta name="description" content="kittoworksのLPテンプレート販売と制作実績の紹介ページ。代表作のプレビューを掲載しています。">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .works-hero {
+      padding: 80px 0 56px;
+      background: radial-gradient(1000px 400px at 20% -10%, rgba(108,92,231,.18), transparent 60%);
+    }
+    .works-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+      color: #eee;
+    }
+    .works-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 30px;
+    }
+    .works-card {
+      background: #11121a;
+      border: 1px solid #1b1d28;
+      border-radius: 18px;
+      padding: 16px;
+      transition: transform .2s;
+    }
+    .works-card:hover {
+      transform: translateY(-4px);
+    }
+    .works-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .works-card h3 {
+      margin: 6px 0;
+    }
+    .works-card p {
+      color: #aaa;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .works-btn {
+      display: inline-block;
+      padding: 10px 14px;
+      background: #6C5CE7;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .more-btn {
+      display: inline-block;
+      margin: 40px auto 0;
+      background: transparent;
+      border: 2px solid #A29BFE;
+      color: #A29BFE;
+      padding: 12px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: .2s;
+    }
+    .more-btn:hover {
+      background: #A29BFE;
+      color: #0b0b10;
+    }
+  </style>
+</head>
+<body>
+  <header class="kw-header">
+    <div class="kw-wrap in">
+      <div class="kw-logo"><a href="index.html">kittoworks</a></div>
+      <nav class="kw-nav">
+        <a class="active" href="works.html">LP販売</a>
+        <a href="shop.html">生成画像</a>
+        <a href="price.html">価格表</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="works-hero">
+      <div class="works-wrap">
+        <h1 class="kw-h1">LPテンプレート販売・制作実績</h1>
+        <p class="kw-lead">
+          AI × Web × デザインで生まれたLPテンプレート・受託LPの代表作をご紹介します。<br>
+          ご希望のテイストをもとにカスタム制作も可能です。
+        </p>
+
+        <div class="works-grid">
+          <!-- 代表作1 -->
+          <div class="works-card">
+            <img src="images/lp-minimal.jpg" alt="受託用ミニマルLP">
+            <h3>受託用ミニマルLP</h3>
+            <p>スピード納品＆訴求重視のシンプル構成。<br>最短3日で即公開OK。</p>
+            <a class="works-btn" href="portfolio_lp.html" target="_blank">プレビュー</a>
+          </div>
+
+          <!-- 代表作2 -->
+          <div class="works-card">
+            <img src="images/lp-script.jpg" alt="動画台本LP（紙面風）">
+            <h3>動画台本LP（紙面風）</h3>
+            <p>読みやすさ重視の編集テイスト。<br>ショート動画やナレーション台本販売向け。</p>
+            <a class="works-btn" href="Video%20Script%20Lp.html" target="_blank">プレビュー</a>
+          </div>
+
+          <!-- 代表作3 -->
+          <div class="works-card">
+            <img src="images/lp-app.jpg" alt="アプリ紹介（ネオン）">
+            <h3>アプリ紹介LP（ネオン）</h3>
+            <p>近未来的なネオン×グラスデザイン。<br>アプリやAIサービス紹介に最適。</p>
+            <a class="works-btn" href="app.html" target="_blank">プレビュー</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <a href="sample/index.html" class="more-btn">もっと見る（全実績）</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kw-footer">
+    <div class="kw-wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+      <span>© <span id="y"></span> kittoworks</span>
+      <span>
+        <a href="https://x.com/kitto_1225" target="_blank">X</a> /
+        <a href="https://instagram.com/kitto_1225works" target="_blank">Instagram</a>
+      </span>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
