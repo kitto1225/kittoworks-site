@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>サンプルLP一覧｜kittoworks</title>
+  <meta name="description" content="kittoworksが制作したLPテンプレートのサンプル一覧ページ。各デザインのプレビューを確認できます。">
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      background: #0b0b10;
+      color: #f2f2f2;
+      font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
+    }
+    header.kw-header {
+      background: rgba(11, 11, 16, 0.8);
+      border-bottom: 1px solid #1b1d28;
+      backdrop-filter: blur(8px);
+    }
+    .samples-hero {
+      padding: 80px 0 40px;
+      background: radial-gradient(900px 400px at 20% -10%, rgba(108,92,231,.18), transparent 60%);
+      text-align: center;
+    }
+    .samples-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .samples-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 20px;
+    }
+    .sample-card {
+      background: #11121a;
+      border: 1px solid #1b1d28;
+      border-radius: 16px;
+      padding: 14px;
+      transition: transform .2s;
+    }
+    .sample-card:hover {
+      transform: translateY(-4px);
+    }
+    .sample-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .sample-card h3 {
+      margin: 6px 0;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .sample-card p {
+      color: #aaa;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .sample-btn {
+      display: inline-block;
+      margin-top: 8px;
+      background: #6C5CE7;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 40px auto;
+      background: transparent;
+      border: 2px solid #A29BFE;
+      color: #A29BFE;
+      padding: 12px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: .2s;
+    }
+    .back-btn:hover {
+      background: #A29BFE;
+      color: #0b0b10;
+    }
+  </style>
+</head>
+<body>
+  <header class="kw-header">
+    <div class="kw-wrap in">
+      <div class="kw-logo"><a href="../index.html">kittoworks</a></div>
+      <nav class="kw-nav">
+        <a href="../works.html">LP販売</a>
+        <a href="../shop.html">生成画像</a>
+        <a href="../price.html">価格表</a>
+        <a href="../contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="samples-hero">
+      <div class="samples-wrap">
+        <h1 class="kw-h1">サンプルLP一覧</h1>
+        <p class="kw-lead">
+          実際のテンプレートデザインをこちらで確認できます。<br>
+          SNS投稿用・販売用のLPサンプルを随時追加中。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="samples-wrap">
+        <div class="samples-grid">
+          <!-- サンプル1 -->
+          <div class="sample-card">
+            <img src="../images/sample-lp01-thumb.jpg" alt="Sample LP 01">
+            <h3>Sample LP 01 - シンプル構成</h3>
+            <p>ミニマルで訴求力の高い1枚構成テンプレート。<br>シンプルな紹介・販売LPに最適。</p>
+            <a class="sample-btn" href="sample-lp01.html" target="_blank" rel="noopener">プレビュー</a>
+          </div>
+
+          <!-- サンプル2 -->
+          <div class="sample-card">
+            <img src="../images/sample-lp02-thumb.jpg" alt="Sample LP 02">
+            <h3>Sample LP 02 - カラフルLP</h3>
+            <p>ポップなカラーと柔らかいフォントで構成。<br>SNSプロモーション向けのLP例。</p>
+            <a class="sample-btn" href="sample-lp02.html" target="_blank" rel="noopener">プレビュー</a>
+          </div>
+
+          <!-- サンプル3 -->
+          <div class="sample-card">
+            <img src="../images/sample-lp03-thumb.jpg" alt="Sample LP 03">
+            <h3>Sample LP 03 - ネオンスタイル</h3>
+            <p>グラスモーフィズム＋光のエフェクトを採用。<br>アプリ紹介やAIサービスにおすすめ。</p>
+            <a class="sample-btn" href="sample-lp03.html" target="_blank" rel="noopener">プレビュー</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <a href="../works.html" class="back-btn">← LP販売ページへ戻る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kw-footer">
+    <div class="kw-wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+      <span>© <span id="y"></span> kittoworks</span>
+      <span>
+        <a href="https://x.com/kitto_1225" target="_blank">X</a> /
+        <a href="https://instagram.com/kitto_1225works" target="_blank">Instagram</a>
+      </span>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
