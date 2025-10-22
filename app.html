@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja" id="top">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI彼女チャット（β）｜kittoworks</title>
+  <meta name="description" content="個性の違うキャラと会話できるAIチャット。ログ保存・親密度イベント搭載。β版を体験できます。">
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="kittoworks">
+  <meta property="og:title" content="AI彼女チャット（β）｜kittoworks">
+  <meta property="og:description" content="個性の違うキャラと会話。ログ保存・親密度イベント。β体験はこちら。">
+  <meta property="og:image" content="https://kittoworks-site.vercel.app/images/ogp_main.jpg">
+  <meta property="og:url" content="https://kittoworks-site.vercel.app/app.html">
+  <link rel="canonical" href="https://kittoworks-site.vercel.app/app.html">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Page-local: Neon Glass Theme --- */
+    .glass{--bg:#050510;--ink:#e7e7f2;--muted:#9aa0b3;--primary:#7c3aed;--secondary:#06b6d4}
+    .glass body{background:radial-gradient(60% 60% at 10% -10%, rgba(124,58,237,.25), transparent 60%),
+                               radial-gradient(70% 70% at 100% 0%, rgba(6,182,212,.20), transparent 60%), #050510;}
+    .glass header.kw-header{background:rgba(5,5,16,.55);border-bottom:1px solid rgba(255,255,255,.08)}
+    .glass .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+    .glass .hero{padding:90px 0 56px}
+    .glass .h1{font-size:clamp(28px,4.6vw,56px);line-height:1.08;margin:0;color:var(--ink)}
+    .glass .lead{color:var(--muted)}
+    .glass .cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .glass .card{backdrop-filter: blur(10px) saturate(140%); background: linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.18); border-radius:16px; padding:16px}
+    .glass .btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:800;letter-spacing:.02em}
+    .glass .btn.solid{background:linear-gradient(90deg, var(--primary), var(--secondary));color:#fff}
+    .glass .btn.ghost{border:1px solid rgba(255,255,255,.26);color:var(--ink)}
+    .glass .shots{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .glass .shot{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05)}
+    .glass .shot img{width:100%;height:auto;display:block}
+  </style>
+</head>
+<body class="glass">
+  <header class="kw-header">
+    <div class="kw-wrap in">
+      <div class="kw-logo"><a href="index.html">kittoworks</a></div>
+      <nav class="kw-nav">
+        <a href="works.html">LP販売</a>
+        <a href="shop.html">生成画像</a>
+        <a href="price.html">価格表</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1 class="h1">AI彼女チャット（β）</h1>
+        <p class="lead">個性が違うキャラと気軽に会話。ログ保存・親密度イベントで続く体験を。</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn solid" href="https://ai-kanojo-chat.vercel.app/" target="_blank" rel="noopener">β版を開く</a>
+          <a class="btn ghost" href="contact.html?src=app-hero">開発相談</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding:16px 0 10px">
+      <div class="cards">
+        <div class="card"><strong>会話ログ保存</strong><p class="lead">再開しやすいUI。通知負荷も軽量化。</p></div>
+        <div class="card"><strong>キャラ切替</strong><p class="lead">プロフィール＆感情アイコンに対応。</p></div>
+        <div class="card"><strong>親密度イベント</strong><p class="lead">進行に応じて解放。継続率UP。</p></div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding:10px 0 56px">
+      <div class="shots">
+        <figure class="shot"><img src="images/aikanojo3.jpg" alt="会話画面" loading="lazy"></figure>
+        <figure class="shot"><img src="images/aikanojo2.jpg" alt="プロフィール" loading="lazy"></figure>
+        <figure class="shot"><img src="images/aikanojo1.jpg" alt="一覧画面" loading="lazy"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kw-footer">
+    <div class="kw-wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:#cdd3e0">
+      <span>© <span id="y"></span> kittoworks</span>
+      <span><a href="https://x.com/kitto_1225" target="_blank" rel="noopener">X</a> / <a href="https://instagram.com/kitto_1225works" target="_blank" rel="noopener">Instagram</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
