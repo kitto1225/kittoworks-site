@@ -6,7 +6,7 @@
   <title>制作実績ポートフォリオ｜kittoworks</title>
   <meta name="description" content="制作したLPの実績をケーススタディ形式で紹介。狙い・構成・結果を交互レイアウトで分かりやすく掲載しています。">
 
-  <!-- OGP -->
+  
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="kittoworks">
   <meta property="og:title" content="制作実績ポートフォリオ｜kittoworks">
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://kittoworks-site.vercel.app/portfolio_lp.html">
   <link rel="canonical" href="https://kittoworks-site.vercel.app/portfolio_lp.html">
 
-  <!-- ページ専用スタイル（他ページに影響しません） -->
+  
   <style>
     :root{
       --bg:#0b0b10; --ink:#EAECF2; --muted:#A7A9B4; --line:#1b1d28;
@@ -33,7 +33,7 @@
     .h2{font-size:clamp(22px,3.2vw,34px);line-height:1.18;margin:0 0 6px}
     .lead{font-size:clamp(14px,2.1vw,18px);color:var(--muted)}
 
-    /* 共通ナビ（他ページと同じクラス名でOK。必要最低限のみ指定） */
+    
     header.kw-header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(11,11,16,.6);border-bottom:1px solid var(--line);z-index:20}
     .kw-header .in{display:flex;align-items:center;justify-content:space-between;height:64px}
     .kw-logo a{font-weight:800;text-decoration:none}
@@ -41,7 +41,7 @@
     .kw-nav a{text-decoration:none;opacity:.9}
     .kw-nav a:hover{opacity:1}
 
-    /* HERO */
+    
     .hero{padding:86px 0 52px;background:
       radial-gradient(1200px 520px at 20% -10%, rgba(108,92,231,.18), transparent 58%),
       radial-gradient(800px 480px at 100% 0%, rgba(162,155,254,.12), transparent 60%)}
@@ -53,7 +53,7 @@
     .btn.solid{background:var(--accent);color:#fff;border:1.5px solid var(--accent);box-shadow:var(--shadow)}
     .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--accent2)}
 
-    /* CASE STUDIES */
+    
     section{padding:54px 0}
     .case{display:grid;gap:20px;align-items:center}
     .case+.case{margin-top:24px}
@@ -73,7 +73,7 @@
       .case.reverse .col:nth-child(2){order:1}
     }
 
-    /* ショーケースグリッド（他案件のサムネを並べる） */
+    
     .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
     .tile{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01))}
     .tile img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
@@ -81,13 +81,13 @@
     .tile .meta h3{margin:.2em 0 0;font-size:1.02rem}
     .tile .meta p{margin:.2em 0 0;color:var(--muted);font-size:.92rem}
 
-    /* フッター */
+    
     footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted)}
     footer a{color:var(--muted)}
   </style>
 </head>
 <body>
-  <!-- 共通ナビ -->
+  
   <header class="kw-header">
     <div class="wrap in">
       <div class="kw-logo"><a href="index.html">kittoworks</a></div>
@@ -101,7 +101,7 @@
   </header>
 
   <main>
-    <!-- HERO -->
+   
     <section class="hero">
       <div class="wrap">
         <div class="sub">
@@ -118,7 +118,7 @@
       </div>
     </section>
 
-    <!-- CASE 01 -->
+    
     <section>
       <div class="wrap">
         <div class="case">
@@ -147,7 +147,7 @@
       </div>
     </section>
 
-    <!-- CASE 02 -->
+    
     <section>
       <div class="wrap">
         <div class="case reverse">
@@ -176,7 +176,7 @@
       </div>
     </section>
 
-    <!-- CASE 03 -->
+    
     <section>
       <div class="wrap">
         <div class="case">
@@ -205,7 +205,7 @@
       </div>
     </section>
 
-    <!-- SHOWCASE GRID -->
+    
     <section id="more">
       <div class="wrap">
         <h2 class="h2">他の実績（抜粋）</h2>
@@ -235,7 +235,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    
     <section>
       <div class="wrap">
         <div class="card" style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
@@ -252,7 +252,7 @@
     </section>
   </main>
 
-  <!-- 共通フッター（軽量版） -->
+  
   <footer>
     <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
       <span>© <span id="y"></span> kittoworks</span>
@@ -262,3 +262,4 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
