@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お問い合わせ｜kittoworks</title>
+  <meta name="description" content="テンプレ名／用途（ドメイン）／納期希望をご記入ください。メール本文が自動生成され、そのまま送信できます。">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="kittoworks">
+  <meta property="og:title" content="お問い合わせ｜kittoworks">
+  <meta property="og:description" content="テンプレ名／用途（ドメイン）／納期希望をご記入ください。メール本文が自動生成され、そのまま送信できます。">
+  <meta property="og:image" content="https://kittoworks-site.vercel.app/images/ogp_main.jpg">
+  <meta property="og:url" content="https://kittoworks-site.vercel.app/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kittoworks-site.vercel.app/contact.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="kw-header">
+    <div class="kw-wrap in">
+      <div class="kw-logo"><a href="index.html">kittoworks</a></div>
+      <nav class="kw-nav">
+        <a href="works.html">LP販売</a>
+        <a href="shop.html">生成画像</a>
+        <a href="price.html">価格表</a>
+        <a class="active" href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="kw-hero">
+      <div class="kw-wrap">
+        <div class="col">
+          <h1 class="kw-h1">お問い合わせ</h1>
+          <p class="kw-lead">テンプレ名／用途（ドメイン）／納期希望をご記入ください。<br>メール本文を自動生成し、そのまま送信できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="kw-section">
+      <div class="kw-wrap">
+        <form class="form" id="contactForm">
+          <div>
+            <label for="type">お問い合わせ種別</label>
+            <select id="type" class="input">
+              <option value="制作相談">制作相談</option>
+              <option value="LPテンプレ購入">LPテンプレ購入</option>
+              <option value="画像購入">画像購入</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div>
+            <label for="tpl">テンプレ／商品名（任意）</label>
+            <input id="tpl" class="input" placeholder="例：動画台本LP / NEON-GLASS 01">
+          </div>
+          <div>
+            <label for="domain">用途／ドメイン</label>
+            <input id="domain" class="input" placeholder="例：プロダクトLP / example.com">
+          </div>
+          <div class="kw-grid" style="grid-template-columns:1fr 1fr">
+            <div>
+              <label for="deadline">納期希望</label>
+              <input id="deadline" class="input" placeholder="例：2週間以内">
+            </div>
+            <div>
+              <label for="budget">ご予算目安</label>
+              <input id="budget" class="input" placeholder="例：〜3万円">
+            </div>
+          </div>
+          <div>
+            <label for="message">詳細</label>
+            <textarea id="message" class="input" rows="6" placeholder="ご希望・参考URLなど"></textarea>
+          </div>
+          <div class="kw-grid" style="grid-template-columns:1fr 1fr">
+            <div>
+              <label for="name">お名前</label>
+              <input id="name" class="input" placeholder="お名前">
+            </div>
+            <div>
+              <label for="email">メール</label>
+              <input id="email" class="input" placeholder="example@mail.com">
+            </div>
+          </div>
+          <div>
+            <label for="contactWay">希望連絡方法</label>
+            <select id="contactWay" class="input">
+              <option value="メール">メール</option>
+              <option value="XのDM">XのDM</option>
+              <option value="InstagramのDM">InstagramのDM</option>
+            </select>
+          </div>
+          <div>
+            <label for="xid">SNSアカウントID（任意）</label>
+            <input id="xid" class="input" placeholder="@example">
+          </div>
+          <div>
+           <div class="agreement-box">
+  <label style="display:block;margin-bottom:6px;">
+    <input type="checkbox" id="agreeTerms">
+    <span>利用規約に同意する（<a href="terms.html" target="_blank" rel="noopener">確認</a>）</span>
+  </label>
+  <label style="display:block;">
+    <input type="checkbox" id="agreePrivacy">
+    <span>プライバシーポリシーに同意する（<a href="privacy.html" target="_blank" rel="noopener">確認</a>）</span>
+  </label>
+</div>
+
+          </div>
+          <div>
+            <button class="kw-btn kw-btn--solid" id="sendBtn">メールを作成する</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kw-footer">
+    <div class="kw-wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+      <span>© <span id="y"></span> kittoworks</span>
+      <span><a href="https://x.com/kitto_1225" target="_blank" rel="noopener">X</a> / <a href="https://instagram.com/kitto_1225works" target="_blank" rel="noopener">Instagram</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const EMAIL_TO="kitto1225.helpdesk@gmail.com";
+    function getParam(key){return new URLSearchParams(location.search).get(key)||"";}
+
+    document.getElementById('sendBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const f = id => document.getElementById(id)?.value?.trim() || "";
+      const name=f('name'), email=f('email'), type=f('type'), way=f('contactWay'), xid=f('xid');
+      const tpl=f('tpl'), domain=f('domain'), deadline=f('deadline'), budget=f('budget'), msg=f('message');
+// 同意チェック（利用規約＋プライバシーポリシー両方）
+const agreeTerms = document.getElementById('agreeTerms');
+const agreePrivacy = document.getElementById('agreePrivacy');
+if (!agreeTerms.checked || !agreePrivacy.checked) {
+  alert('「利用規約」と「プライバシーポリシー」の両方に同意してください。');
+  return;
+}
+
+
+      const lines=[
+        `【お問い合わせ種別】${type}`,
+        `【テンプレ/商品名】${tpl}`,
+        `【用途/ドメイン】${domain}`,
+        `【納期希望】${deadline||'未定'}`,
+        `【ご予算目安】${budget||'未定'}`,
+        `【詳細】\n${msg}`,
+        `\n---`,
+        `【お名前】${name}`,
+        `【メール】${email}`,
+        `【希望連絡方法】${way}${xid? '（'+xid+'）':''}`,
+        src ? `【来訪元】${src}` : ''
+      ].filter(Boolean);
+
+      const subjectCore=`【${type||'お問い合わせ'}】${tpl? ' '+tpl:''}（kittoworks）`;
+      const subject=src ? `${subjectCore} [src:${src}]` : subjectCore;
+      const body=lines.join('\n');
+      location.href=`mailto:${EMAIL_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    // 来訪元バッジ（任意表示）
+    (function(){
+      const src=getParam('src'); if(!src) return;
+      const badge=document.createElement('div');
+      badge.textContent=`来訪元: ${src}`;
+      badge.style.cssText="position:fixed;left:12px;bottom:12px;background:#111;color:#fff;padding:6px 10px;border-radius:999px;font:12px/1 sans-serif;z-index:9999;opacity:.85";
+      document.body.appendChild(badge);
+    })();
+
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
