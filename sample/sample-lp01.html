@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CREATOR MIRROR – 作品の世界を魅せるLP</title>
+  <meta name="description" content="クリエイター・AIアート販売者向けのサンプルLP。ポートフォリオ・販売リンク・SNS導線を1ページに集約。" />
+  <meta property="og:title" content="CREATOR MIRROR – 作品の世界を魅せるLP" />
+  <meta property="og:description" content="クリエイター・AIアート販売者向けのサンプルLP。ポートフォリオ・販売リンク・SNS導線を1ページに集約。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#121417; --muted:#5a6070; --primary:#2b6cb0; --primary-weak:#e6f0fb; --line:#e9edf3; --accent:#7cacf2;
+      --shadow:0 10px 30px rgba(20,35,60,.08);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.7 "Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium",Poppins,system-ui,-apple-system,sans-serif}
+    img{max-width:100%;display:block}
+    a{color:var(--primary);text-decoration:none}
+    .container{width:min(1120px,92%);margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;background:#fffcc0; background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.94) 60%,rgba(255,255,255,.86) 100%);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#cfe7ff,#eef5ff);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .brand strong{font-weight:700;letter-spacing:.2px}
+    .nav a.btn{padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .nav a.btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+    /* Hero */
+    .hero{position:relative;padding:88px 0 56px;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(60% 50% at 50% 0%, #eef6ff 0%, rgba(238,246,255,0) 70%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:var(--primary-weak);color:#2b4770;font-size:12px;border:1px solid #d7e6fd}
+    h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:10px 0 12px;font-weight:800;letter-spacing:.2px}
+    .lead{font-size:18px;color:var(--muted);margin:0 0 20px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);font-weight:700}
+    .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+    .hero-card{border:1px solid var(--line);border-radius:var(--radius);padding:14px;background:#fff;box-shadow:var(--shadow)}
+    .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .chip{display:inline-block;font-size:12px;color:#2b4770;background:#f1f7ff;border:1px solid #d9e9ff;border-radius:999px;padding:4px 10px;margin-right:8px}
+
+    /* Sections */
+    section{padding:68px 0;border-top:1px solid var(--line)}
+    .section-title{font-size:26px;margin:0 0 10px}
+    .section-lead{color:var(--muted);margin:0 0 28px}
+
+    /* Problems */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+
+    /* Solution */
+    .feature{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .bullet{display:flex;gap:12px;margin:10px 0}
+    .bullet b{min-width:88px;display:inline-grid;place-items:center;padding:6px 10px;border-radius:999px;background:#eef5ff;border:1px solid #d7e6fd}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .shot{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+
+    /* Process */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:#fff}
+    .step .num{font-weight:800;color:var(--primary)}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .plan{border:1px solid var(--line);border-radius:18px;padding:20px;background:linear-gradient(180deg,#fff, #fbfdff);box-shadow:var(--shadow)}
+    .plan h3{margin:0 0 4px}
+    .plan .price{font-size:28px;font-weight:800;margin:8px 0 10px}
+    .plan ul{margin:0;padding-left:18px;color:var(--muted)}
+
+    /* CTA */
+    .cta-box{border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(180deg,#fff,#f7fbff)}
+    .cta-box h3{margin:0 0 6px}
+
+    footer{padding:48px 0;color:#7a8192}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-grid,.feature{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .pricing{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <strong>CREATOR MIRROR</strong>
+      </div>
+      <nav class="actions">
+        <a href="#pricing" class="btn">料金を見る</a>
+        <a href="#contact" class="btn primary">相談する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">クリエイター / AIアート販売者向け</span>
+          <h1>作品の魅力を、<br>デザインで引き出す。</h1>
+          <p class="lead">ポートフォリオ・販売リンク・SNS導線を1ページに集約。<br>あなたの世界観を白基調のミニマルデザインで美しく。</p>
+          <div class="cta">
+            <a href="#gallery" class="btn primary">デザインを見る</a>
+            <a href="#contact" class="btn">まずは相談する</a>
+          </div>
+          <p style="margin-top:16px">
+            <span class="chip">レスポンシブ対応</span>
+            <span class="chip">SNS連携</span>
+            <span class="chip">軽量・高速</span>
+          </p>
+        </div>
+        <div>
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=1200&auto=format&fit=crop" alt="作品プレビュー"/>
+            <div class="thumbs">
+              <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=600&auto=format&fit=crop" alt="thumb1"/>
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" alt="thumb2"/>
+              <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?q=80&w=600&auto=format&fit=crop" alt="thumb3"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems -->
+    <section id="problems">
+      <div class="container">
+        <h2 class="section-title">こんな悩み、ありませんか？</h2>
+        <p class="section-lead">共通の課題に寄り添い、解決策を“LP”という形でご提案します。</p>
+        <div class="cards">
+          <div class="card"><h3>世界観が伝わらない</h3><p>SNSだと断片的。作品の魅力を一目で伝えにくい。</p></div>
+          <div class="card"><h3>リンクが分散している</h3><p>プロフィール、販売、依頼ページがバラバラで機会損失。</p></div>
+          <div class="card"><h3>依頼導線が弱い</h3><p>「今すぐ相談」につながるCTAが設計されていない。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution">
+      <div class="container feature">
+        <div>
+          <h2 class="section-title">“1ページ”で、魅せる・整える・つなぐ。</h2>
+          <p class="section-lead">ポートフォリオ、販売リンク、プロフィール、依頼ボタンを1箇所に集結。印象UPと導線強化を同時に。</p>
+
+          <div class="bullet"><b>魅せる</b><span>白基調×余白設計で作品が主役に。タイポとレイアウトで世界観を演出。</span></div>
+          <div class="bullet"><b>整える</b><span>各種リンクを整理し、閲覧者が迷わない情報設計。</span></div>
+          <div class="bullet"><b>つなぐ</b><span>SNSやECへの導線を最適化。DM/メールに自然と誘導。</span></div>
+        </div>
+        <div>
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="ソリューションモック"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / Templates -->
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">テンプレートサンプル</h2>
+        <p class="section-lead">用途に合わせて3タイプ。クリックで拡大・詳細へ（ダミー）。</p>
+        <div class="gallery">
+          <a class="shot" href="#" aria-label="AIアート販売者向け">
+            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop" alt="AIアート販売テンプレ"/>
+          </a>
+          <a class="shot" href="#" aria-label="動画クリエイター向け">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="動画クリエイターテンプレ"/>
+          </a>
+          <a class="shot" href="#" aria-label="ポートフォリオ向け">
+            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop" alt="ポートフォリオテンプレ"/>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+      <div class="container">
+        <h2 class="section-title">制作の流れ</h2>
+        <p class="section-lead">すべてオンラインで完結。最短で公開までサポートします。</p>
+        <div class="steps">
+          <div class="step"><div class="num">01</div><h3>お問い合わせ</h3><p>目的・納期・ご予算をヒアリング。</p></div>
+          <div class="step"><div class="num">02</div><h3>方向性設計</h3><p>世界観ボード／ワイヤーで合意形成。</p></div>
+          <div class="step"><div class="num">03</div><h3>デザイン制作</h3><p>テキスト整備・レイアウト・アニメ表現。</p></div>
+          <div class="step"><div class="num">04</div><h3>微調整＆公開</h3><p>最終調整→納品。SNSプロフィールに設定。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="container">
+        <h2 class="section-title">料金プラン</h2>
+        <p class="section-lead">用途やスピードに合わせて柔軟に対応します。記載外のご相談も歓迎です。</p>
+        <div class="pricing">
+          <div class="plan">
+            <h3>Light</h3>
+            <p class="price">¥10,000〜</p>
+            <ul>
+              <li>シンプル1ページ</li>
+              <li>基本レイアウト＆コピー配置</li>
+              <li>納期：3〜7日目安</li>
+            </ul>
+          </div>
+          <div class="plan" style="border-width:2px">
+            <h3>Standard</h3>
+            <p class="price">¥20,000〜</p>
+            <ul>
+              <li>情報設計＋デザイン</li>
+              <li>レスポンシブ最適化</li>
+              <li>簡易アニメーション</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <h3>Premium</h3>
+            <p class="price">¥30,000〜</p>
+            <ul>
+              <li>世界観設計／ブランドトーン提案</li>
+              <li>高度なアニメーション・効果</li>
+              <li>掲載後の微修正1回含む</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h3>🌙 自分の作品を、もっと美しく魅せよう。</h3>
+          <p class="section-lead">まずはお気軽にご相談ください。用途やご予算に合わせて最適な構成をご提案します。</p>
+          <div class="cta">
+            <a href="https://x.com/kitto_1225" target="_blank" rel="noopener" class="btn primary">XでDMする</a>
+            <a href="mailto:kitto1225works@gmail.com?subject=LP相談&body=お名前：%0D%0Aご希望内容：%0D%0Aご予算：%0D%0A納期：%0D%0A参考URL：" class="btn">メールで相談する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <small>© 2025 kitto works</small>
+      <div style="display:flex;gap:12px">
+        <a href="#problems">課題</a>
+        <a href="#gallery">サンプル</a>
+        <a href="#pricing">料金</a>
+        <a href="#contact">相談</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // スムーススクロール（OS設定を尊重し、reduced motionなら無効）
+    (()=>{
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          const id=a.getAttribute('href');
+          if(id.length>1){
+            const el=document.querySelector(id);
+            if(el){ e.preventDefault(); el.scrollIntoView({behavior: prefersReduced?'auto':'smooth'}); }
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+

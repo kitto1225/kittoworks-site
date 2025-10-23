@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serene Path – 手書きノート風LP（コーチング/カウンセリング）</title>
+  <meta name="description" content="自然×手書きノートのやさしい世界観。曲線区切り、罫線、手描き風アイコンで“個人のあたたかさ”を伝えるLPサンプル。" />
+  <meta name="theme-color" content="#f9f6ef" />
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f9f6ef;          /* 生成り／紙色 */
+      --paper:#fffdfa;       /* 白紙 */
+      --ink:#2b2a28;         /* 文字色 */
+      --muted:#6e6a63;       /* 補助文字 */
+      --olive:#4a6b58;       /* アクセント（葉）*/
+      --rose:#d79a8a;        /* アクセント（花）*/
+      --line:#e6e0d6;        /* 罫線 */
+      --tape:#efe6cf;        /* マスキングテープ */
+      --radius:18px;
+      --shadow:0 12px 30px rgba(45,35,25,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.7 "Noto Sans JP", system-ui, -apple-system, sans-serif}
+    img{max-width:100%;display:block}
+    a{color:var(--olive);text-decoration:none}
+    .script{font-family:"Yomogi", cursive;letter-spacing:.5px}
+    .container{width:min(980px,92%);margin-inline:auto}
+
+    /* --- Header (スリム＋手書きロゴ) --- */
+    header{position:sticky;top:0;z-index:30;background:rgba(249,246,239,.85);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px dashed var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .leaf{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 180deg,#cfe7cf,#fff,#f6eada);border:1px solid var(--line)}
+    .brand strong{font-weight:700}
+    .brand .script{font-size:22px}
+
+    /* --- Curvy Hero --- */
+    .hero-wrap{position:relative;overflow:hidden}
+    .wave-top{position:absolute;inset:auto 0 100%; height:100px}
+    .wave-bottom{position:absolute;inset:100% 0 auto; height:100px}
+    .hero{position:relative;background:linear-gradient(180deg,#f6f1e7 0%, #fffdfa 100%);}
+    .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:72px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:#eef3ee;border:1px solid #dde6dd;color:#3e5746;font-size:12px}
+    h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:10px 0 12px}
+    h1 .script{font-size:clamp(30px,4.6vw,48px)}
+    .lead{color:var(--muted);margin:0 0 18px}
+
+    /* --- Paper cards with ruled lines --- */
+    section{padding:64px 0;border-top:1px dashed var(--line)}
+    .paper{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow);padding:22px}
+    .paper::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(180deg, transparent 0 30px, rgba(230,224,214,.6) 31px, transparent 32px);opacity:.45;pointer-events:none;border-radius:inherit}
+    .paper .tape{position:absolute;left:18px;top:-10px;width:92px;height:26px;background:var(--tape);transform:rotate(-3deg);box-shadow:0 2px 6px rgba(0,0,0,.07)}
+    .paper .tape.r{left:auto;right:18px;transform:rotate(4deg)}
+
+    .section-title{font-size:24px;margin:0 0 8px}
+    .section-lead{color:var(--muted);margin:0 0 18px}
+
+    /* --- Doodle list --- */
+    .doodles{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .doodle{display:flex;gap:12px;align-items:flex-start}
+    .doodle svg{flex:0 0 26px}
+
+    /* --- Voice (付箋風) --- */
+    .voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+    .note{position:relative;border:1px dashed var(--line);border-radius:14px;background:#fffdf4;padding:16px;box-shadow:var(--shadow)}
+    .note::before{content:"";position:absolute;top:-12px;left:16px;width:84px;height:22px;background:var(--tape);transform:rotate(-5deg);box-shadow:0 2px 4px rgba(0,0,0,.06)}
+    .note small{color:var(--muted)}
+
+    /* --- Steps (曲線矢印) --- */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+    .step{position:relative;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:16px}
+    .step .num{font-weight:800;color:var(--olive)}
+
+    /* --- CTA floating (下フローティング) --- */
+    .float-cta{position:fixed;z-index:40;right:18px;bottom:18px;display:flex;gap:10px;align-items:center}
+    .fab{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:999px;background:var(--olive);color:#fff;box-shadow:var(--shadow)}
+    .fab.ghost{background:#fff;border:1px solid var(--line);color:var(--olive)}
+
+    footer{padding:46px 0;color:#8a847c}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-inner{grid-template-columns:1fr}
+      .doodles{grid-template-columns:1fr}
+      .voices{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="leaf" aria-hidden="true"></div>
+        <strong class="script">Serene Path</strong>
+      </div>
+      <nav class="actions" style="display:flex;gap:10px">
+        <a href="#voices">ご利用の声</a>
+        <a href="#contact" class="script">予約する</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Curvy hero -->
+  <div class="hero-wrap">
+    <section class="hero" id="top">
+      <svg class="wave-top" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--bg)" d="M0,100 C200,20 400,0 720,70 C1040,140 1240,90 1440,30 L1440,0 L0,0 Z"/></svg>
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow">コーチング / カウンセリング / 個人教室</span>
+          <h1><span class="script">やさしい手書きで、
+            こころに寄り添うページ。</span></h1>
+          <p class="lead">ノートのように読みやすく、写真と言葉がゆっくり届く。初めての方も迷わない導線設計。
+          </p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+            <a href="#why" class="script">どうして？</a>
+            <a href="#contact" class="script">予約する</a>
+          </div>
+        </div>
+        <div>
+          <div class="paper" style="padding:0">
+            <div class="tape"></div>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop" alt="自然光の差す窓辺とノート"/>
+          </div>
+        </div>
+      </div>
+      <svg class="wave-bottom" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--bg)" d="M0,0 C200,80 400,100 720,30 C1040,-40 1240,10 1440,70 L1440,100 L0,100 Z"/></svg>
+    </section>
+  </div>
+
+  <!-- Why (doodles) -->
+  <section id="why">
+    <div class="container">
+      <div class="paper">
+        <div class="tape r"></div>
+        <h2 class="section-title script">なんで “ノート風” なの？</h2>
+        <p class="section-lead">ページを開く所作そのものが安心になるように。手書きの温度で、最初の一歩を軽くします。</p>
+        <div class="doodles">
+          <div class="doodle">
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 12c3-6 13-6 16 0" stroke="#4a6b58" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <div><strong>読みやすい罫線</strong><br><span class="script">目が迷わない。大事なところに自然と視線がいく。</span></div>
+          </div>
+          <div class="doodle">
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 3v18M3 12h18" stroke="#d79a8a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <div><strong>言葉をやさしく翻訳</strong><br><span class="script">専門語は丸く言い換え、図解でふんわり説明。</span></div>
+          </div>
+          <div class="doodle">
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 18c5-4 11-4 16 0" stroke="#4a6b58" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <div><strong>曲線の区切り</strong><br><span class="script">ページのリズムを柔らかく。スクロールが心地よい。</span></div>
+          </div>
+          <div class="doodle">
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="#d79a8a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <div><strong>迷わない導線</strong><br><span class="script">各所に小さなボタン。最後に大きな“予約”。</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voices (sticky notes) -->
+  <section id="voices">
+    <div class="container">
+      <div class="paper">
+        <div class="tape"></div>
+        <h2 class="section-title script">ご利用の声</h2>
+        <p class="section-lead">はじめてでも、安心だったという声を集めました。</p>
+        <div class="voices">
+          <div class="note"><p>はじめの一通目が送りやすかったです。文面の参考も助かりました。</p><small>30代・女性</small></div>
+          <div class="note"><p>写真の雰囲気がやさしくて、読む気持ちになれました。</p><small>20代・学生</small></div>
+          <div class="note"><p>予約まで2クリックで迷いませんでした。家族にも勧めました。</p><small>40代・男性</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section id="process">
+    <div class="container">
+      <div class="paper">
+        <div class="tape r"></div>
+        <h2 class="section-title script">ご予約までの流れ</h2>
+        <div class="steps">
+          <div class="step"><div class="num">01</div><h3 class="script">メッセージ</h3><p>今の気持ちを短くで大丈夫。</p></div>
+          <div class="step"><div class="num">02</div><h3 class="script">日程きめ</h3><p>あなたの都合に合わせて。</p></div>
+          <div class="step"><div class="num">03</div><h3 class="script">当日</h3><p>オンライン/対面を選べます。</p></div>
+          <div class="step"><div class="num">04</div><h3 class="script">あとで</h3><p>振り返りと、次の一歩を。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA (paper) -->
+  <section id="contact">
+    <div class="container">
+      <div class="paper">
+        <div class="tape"></div>
+        <h2 class="section-title script">まずは、短いひと言から。</h2>
+        <p class="section-lead">不安や気になることだけでOKです。ていねいにお返事します。</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="mailto:kitto1225works@gmail.com?subject=相談予約(Serene%20Path%20-手書きノート)&body=お名前：%0D%0Aご相談内容：%0D%0Aご希望日：%0D%0Aオンライン/対面：" class="script">メールで予約</a>
+          <a href="https://x.com/kitto_1225" target="_blank" rel="noopener" class="script">Xで相談</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating CTA buttons -->
+  <div class="float-cta" aria-label="クイックアクション">
+    <a class="fab" href="#contact" title="予約"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12M6 12h12M6 17h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></a>
+    <a class="fab ghost" href="#voices" title="声"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18l4-3h12V6H4v12z" stroke="#4a6b58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <small>© 2025 kitto works</small>
+      <div style="display:flex;gap:12px">
+        <a href="#why">理由</a>
+        <a href="#voices">声</a>
+        <a href="#contact">予約</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
