@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>お問い合わせ｜kittoworks</title>
+  <meta name="description" content="AI生成画像・LPテンプレート販売・受託制作のご相談はこちらから。">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#0b0b10; --ink:#EAECF2; --muted:#A7A9B4; --line:#1b1d28;
+      --accent:#6C5CE7; --accent2:#A29BFE; --card:#11121a;
+    }
+    body{background:var(--bg);color:var(--ink);line-height:1.8}
+    a{color:var(--accent2);text-decoration:none}
+    a:hover{opacity:.9}
+    header.kw-header{background:rgba(11,11,16,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+    h1{margin:18px 0 10px}
+    p.kw-lead{color:var(--muted)}
+
+    /* フォームカード */
+    .form-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 14px 36px rgba(0,0,0,.28);
+    }
+    label{display:block;margin:12px 0 6px;font-weight:600}
+    input,textarea,select{
+      width:100%;padding:10px 12px;border:1px solid var(--line);
+      border-radius:10px;background:#0f1117;color:var(--ink);
+      outline:none;transition:border .15s ease, box-shadow .15s ease;
+    }
+    input:focus,textarea:focus,select:focus{border-color:#2b2f3d;box-shadow:0 0 0 2px rgba(162,155,254,.18)}
+    textarea{resize:vertical}
+
+    .row{display:grid;gap:12px}
+    @media(min-width:760px){ .row.cols-2{grid-template-columns:1fr 1fr} }
+
+    .agreement-box{
+      margin-top:14px;padding:12px;border:1px solid var(--line);
+      border-radius:12px;background:#0f1117;color:var(--muted)
+    }
+    .agreement-box label{display:block;margin:6px 0}
+    .agreement-box input[type="checkbox"]{transform:scale(1.05);margin-right:6px}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:.6em;
+      padding:12px 18px;border-radius:12px;font-weight:700;
+      border:1.5px solid var(--accent);background:var(--accent);color:#fff;
+      cursor:pointer;transition:transform .15s ease, opacity .15s ease;margin-top:16px
+    }
+    .btn:hover{transform:translateY(-1px);opacity:.95}
+
+    footer.kw-footer{border-top:1px solid var(--line);color:var(--muted)}
+    footer a{color:var(--muted)}
+  </style>
+</head>
+<body>
+
+  <header class="kw-header">
+    <div class="kw-wrap in" style="display:flex;align-items:center;justify-content:space-between;height:64px">
+      <div class="kw-logo"><a href="index.html">kittoworks</a></div>
+      <nav class="kw-nav" style="display:flex;gap:14px">
+        <a href="works.html">LP販売</a>
+        <a href="shop.html">生成画像</a>
+        <a href="price.html">価格表</a>
+        <a href="contact.html" class="active">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap" style="padding:32px 0">
+      <h1>お問い合わせ</h1>
+      <p class="kw-lead">制作のご相談・ご依頼はこちらからお気軽にどうぞ。内容確認後、メールでご連絡します。</p>
+
+      <div class="form-card">
+        <form id="contactForm" novalidate>
+          <div class="row cols-2">
+            <div>
+              <label for="name">お名前</label>
+              <input type="text" id="name" placeholder="例：山田太郎" required>
+            </div>
+            <div>
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" placeholder="例：example@gmail.com" required>
+            </div>
+          </div>
+
+          <div class="row cols-2">
+            <div>
+              <label for="type">お問い合わせ種別</label>
+              <select id="type">
+                <option value="">選択してください</option>
+                <option>LP制作</option>
+                <option>AI画像販売</option>
+                <option>受託制作</option>
+                <option>その他</option>
+              </select>
+            </div>
+            <div>
+              <label for="contactWay">ご希望の連絡方法</label>
+              <input type="text" id="contactWay" placeholder="例：メール／XのDMなど">
+            </div>
+          </div>
+
+          <div class="row cols-2">
+            <div>
+              <label for="xid">XまたはInstagram ID</label>
+              <input type="text" id="xid" placeholder="@kitto_1225など">
+            </div>
+            <div>
+              <label for="tpl">希望テンプレート（任意）</label>
+              <input type="text" id="tpl" placeholder="例：ChatGPTプロンプト販売LP">
+            </div>
+          </div>
+
+          <div class="row cols-2">
+            <div>
+              <label for="domain">希望ドメイン／掲載先（任意）</label>
+              <input type="text" id="domain" placeholder="例：https://example.com">
+            </div>
+            <div>
+              <label for="deadline">希望納期（任意）</label>
+              <input type="text" id="deadline" placeholder="例：2週間以内">
+            </div>
+          </div>
+
+          <div>
+            <label for="budget">ご予算（任意）</label>
+            <input type="text" id="budget" placeholder="例：5万円以内">
+          </div>
+
+          <div>
+            <label for="message">ご相談内容</label>
+            <textarea id="message" rows="6" placeholder="ご希望・詳細などをご記入ください。"></textarea>
+          </div>
+
+          <!-- 同意チェック -->
+          <div class="agreement-box">
+            <label><input type="checkbox" id="agreeTerms"> 利用規約に同意する（<a href="terms.html" target="_blank" rel="noopener">確認</a>）</label>
+            <label><input type="checkbox" id="agreePrivacy"> プライバシーポリシーに同意する（<a href="privacy.html" target="_blank" rel="noopener">確認</a>）</label>
+            <div style="margin-top:8px;font-size:.9rem;">送信＝両規約に同意したものとみなされます。</div>
+          </div>
+
+          <button type="button" id="sendBtn" class="btn">メール作成</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kw-footer">
+    <div class="kw-wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:16px 0">
+      <span>© <span id="y"></span> kittoworks</span>
+      <span>
+        <a href="terms.html">利用規約</a> /
+        <a href="privacy.html">プライバシー</a> /
+        <a href="legal.html">特商法表記</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    document.getElementById('sendBtn').addEventListener('click', function(e){
+      e.preventDefault();
+
+      const gv = id => (document.getElementById(id)?.value ?? "").trim();
+      const name = gv('name'), email = gv('email'), type = gv('type'), way = gv('contactWay'),
+            xid = gv('xid'), tpl = gv('tpl'), domain = gv('domain'),
+            deadline = gv('deadline'), budget = gv('budget'), msg = gv('message');
+
+      // 同意チェック
+      const agreeTerms = document.getElementById('agreeTerms');
+      const agreePrivacy = document.getElementById('agreePrivacy');
+      if (!agreeTerms.checked || !agreePrivacy.checked) {
+        alert('「利用規約」と「プライバシーポリシー」の両方に同意してください。');
+        return;
+      }
+
+      // 必須
+      if (!name || !email) {
+        alert('お名前とメールアドレスを入力してください。');
+        return;
+      }
+
+      const getParam = k => new URLSearchParams(location.search).get(k) || '';
+      const src = getParam('src');
+
+      const subject = `[LPお問い合わせ] ${name}様 / ${type || '未選択'}`;
+      const lines = [
+        `お名前: ${name}`,
+        `メール: ${email}`,
+        `相談種別: ${type}`,
+        `希望テンプレ: ${tpl}`,
+        `希望ドメイン: ${domain}`,
+        `希望納期: ${deadline}`,
+        `予算: ${budget}`,
+        `連絡方法: ${way}`,
+        `SNS ID: ${xid}`,
+        `参照(src): ${src}`,
+        ``,
+        `ご相談内容:`,
+        msg || '(未入力)'
+      ];
+
+      const body = lines.join('\r\n');
+      const to = 'kitto1225.helpdesk@gmail.com';
+      const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      const a = document.createElement('a');
+      a.href = mailto;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+  </script>
+</body>
+</html>
