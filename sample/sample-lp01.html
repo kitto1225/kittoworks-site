@@ -28,7 +28,7 @@
     .nav a.btn{padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
     .nav a.btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
 
-    /* Hero */
+    
     .hero{position:relative;padding:88px 0 56px;overflow:hidden}
     .hero::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(60% 50% at 50% 0%, #eef6ff 0%, rgba(238,246,255,0) 70%)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
@@ -42,45 +42,45 @@
     .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
     .chip{display:inline-block;font-size:12px;color:#2b4770;background:#f1f7ff;border:1px solid #d9e9ff;border-radius:999px;padding:4px 10px;margin-right:8px}
 
-    /* Sections */
+    
     section{padding:68px 0;border-top:1px solid var(--line)}
     .section-title{font-size:26px;margin:0 0 10px}
     .section-lead{color:var(--muted);margin:0 0 28px}
 
-    /* Problems */
+    
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:var(--shadow)}
     .card h3{margin:0 0 8px;font-size:18px}
     .card p{margin:0;color:var(--muted)}
 
-    /* Solution */
+    
     .feature{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
     .bullet{display:flex;gap:12px;margin:10px 0}
     .bullet b{min-width:88px;display:inline-grid;place-items:center;padding:6px 10px;border-radius:999px;background:#eef5ff;border:1px solid #d7e6fd}
 
-    /* Gallery */
+    
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .shot{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 
-    /* Process */
+    
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .step{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:#fff}
     .step .num{font-weight:800;color:var(--primary)}
 
-    /* Pricing */
+    
     .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .plan{border:1px solid var(--line);border-radius:18px;padding:20px;background:linear-gradient(180deg,#fff, #fbfdff);box-shadow:var(--shadow)}
     .plan h3{margin:0 0 4px}
     .plan .price{font-size:28px;font-weight:800;margin:8px 0 10px}
     .plan ul{margin:0;padding-left:18px;color:var(--muted)}
 
-    /* CTA */
+    
     .cta-box{border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(180deg,#fff,#f7fbff)}
     .cta-box h3{margin:0 0 6px}
 
     footer{padding:48px 0;color:#7a8192}
 
-    /* Responsive */
+    
     @media (max-width:980px){
       .hero-grid,.feature{grid-template-columns:1fr}
       .gallery{grid-template-columns:repeat(2,1fr)}
@@ -105,7 +105,7 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -135,7 +135,7 @@
       </div>
     </section>
 
-    <!-- Problems -->
+    
     <section id="problems">
       <div class="container">
         <h2 class="section-title">こんな悩み、ありませんか？</h2>
@@ -148,7 +148,7 @@
       </div>
     </section>
 
-    <!-- Solution -->
+    
     <section id="solution">
       <div class="container feature">
         <div>
@@ -167,7 +167,7 @@
       </div>
     </section>
 
-    <!-- Gallery / Templates -->
+    
     <section id="gallery">
       <div class="container">
         <h2 class="section-title">テンプレートサンプル</h2>
@@ -186,7 +186,7 @@
       </div>
     </section>
 
-    <!-- Process -->
+   
     <section id="process">
       <div class="container">
         <h2 class="section-title">制作の流れ</h2>
@@ -200,7 +200,7 @@
       </div>
     </section>
 
-    <!-- Pricing -->
+    
     <section id="pricing">
       <div class="container">
         <h2 class="section-title">料金プラン</h2>
@@ -237,7 +237,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    
     <section id="contact">
       <div class="container">
         <div class="cta-box">
@@ -265,7 +265,7 @@
   </footer>
 
   <script>
-    // スムーススクロール（OS設定を尊重し、reduced motionなら無効）
+    
     (()=>{
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -281,4 +281,5 @@
   </script>
 </body>
 </html>
+
 
