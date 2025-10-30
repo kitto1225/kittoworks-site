@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f9f6ef;          /* 生成り／紙色 */
-      --paper:#fffdfa;       /* 白紙 */
-      --ink:#2b2a28;         /* 文字色 */
-      --muted:#6e6a63;       /* 補助文字 */
-      --olive:#4a6b58;       /* アクセント（葉）*/
-      --rose:#d79a8a;        /* アクセント（花）*/
-      --line:#e6e0d6;        /* 罫線 */
-      --tape:#efe6cf;        /* マスキングテープ */
+      --bg:#f9f6ef;          
+      --paper:#fffdfa;       
+      --ink:#2b2a28;         
+      --muted:#6e6a63;       
+      --olive:#4a6b58;      
+      --rose:#d79a8a;        
+      --line:#e6e0d6;        
+      --tape:#efe6cf;       
       --radius:18px;
       --shadow:0 12px 30px rgba(45,35,25,.08);
     }
@@ -27,7 +27,7 @@
     .script{font-family:"Yomogi", cursive;letter-spacing:.5px}
     .container{width:min(980px,92%);margin-inline:auto}
 
-    /* --- Header (スリム＋手書きロゴ) --- */
+    
     header{position:sticky;top:0;z-index:30;background:rgba(249,246,239,.85);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px dashed var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:10px}
@@ -35,7 +35,7 @@
     .brand strong{font-weight:700}
     .brand .script{font-size:22px}
 
-    /* --- Curvy Hero --- */
+   
     .hero-wrap{position:relative;overflow:hidden}
     .wave-top{position:absolute;inset:auto 0 100%; height:100px}
     .wave-bottom{position:absolute;inset:100% 0 auto; height:100px}
@@ -46,7 +46,7 @@
     h1 .script{font-size:clamp(30px,4.6vw,48px)}
     .lead{color:var(--muted);margin:0 0 18px}
 
-    /* --- Paper cards with ruled lines --- */
+    
     section{padding:64px 0;border-top:1px dashed var(--line)}
     .paper{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow);padding:22px}
     .paper::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(180deg, transparent 0 30px, rgba(230,224,214,.6) 31px, transparent 32px);opacity:.45;pointer-events:none;border-radius:inherit}
@@ -56,30 +56,30 @@
     .section-title{font-size:24px;margin:0 0 8px}
     .section-lead{color:var(--muted);margin:0 0 18px}
 
-    /* --- Doodle list --- */
+    
     .doodles{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .doodle{display:flex;gap:12px;align-items:flex-start}
     .doodle svg{flex:0 0 26px}
 
-    /* --- Voice (付箋風) --- */
+    
     .voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
     .note{position:relative;border:1px dashed var(--line);border-radius:14px;background:#fffdf4;padding:16px;box-shadow:var(--shadow)}
     .note::before{content:"";position:absolute;top:-12px;left:16px;width:84px;height:22px;background:var(--tape);transform:rotate(-5deg);box-shadow:0 2px 4px rgba(0,0,0,.06)}
     .note small{color:var(--muted)}
 
-    /* --- Steps (曲線矢印) --- */
+    
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
     .step{position:relative;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:16px}
     .step .num{font-weight:800;color:var(--olive)}
 
-    /* --- CTA floating (下フローティング) --- */
+    
     .float-cta{position:fixed;z-index:40;right:18px;bottom:18px;display:flex;gap:10px;align-items:center}
     .fab{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:999px;background:var(--olive);color:#fff;box-shadow:var(--shadow)}
     .fab.ghost{background:#fff;border:1px solid var(--line);color:var(--olive)}
 
     footer{padding:46px 0;color:#8a847c}
 
-    /* Responsive */
+   
     @media (max-width:980px){
       .hero-inner{grid-template-columns:1fr}
       .doodles{grid-template-columns:1fr}
@@ -102,7 +102,7 @@
     </div>
   </header>
 
-  <!-- Curvy hero -->
+  
   <div class="hero-wrap">
     <section class="hero" id="top">
       <svg class="wave-top" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--bg)" d="M0,100 C200,20 400,0 720,70 C1040,140 1240,90 1440,30 L1440,0 L0,0 Z"/></svg>
@@ -129,7 +129,7 @@
     </section>
   </div>
 
-  <!-- Why (doodles) -->
+  
   <section id="why">
     <div class="container">
       <div class="paper">
@@ -158,7 +158,7 @@
     </div>
   </section>
 
-  <!-- Voices (sticky notes) -->
+  
   <section id="voices">
     <div class="container">
       <div class="paper">
@@ -174,7 +174,7 @@
     </div>
   </section>
 
-  <!-- Steps -->
+  
   <section id="process">
     <div class="container">
       <div class="paper">
@@ -190,7 +190,7 @@
     </div>
   </section>
 
-  <!-- CTA (paper) -->
+ 
   <section id="contact">
     <div class="container">
       <div class="paper">
@@ -205,7 +205,7 @@
     </div>
   </section>
 
-  <!-- Floating CTA buttons -->
+  
   <div class="float-cta" aria-label="クイックアクション">
     <a class="fab" href="#contact" title="予約"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12M6 12h12M6 17h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></a>
     <a class="fab ghost" href="#voices" title="声"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18l4-3h12V6H4v12z" stroke="#4a6b58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -222,4 +222,5 @@
     </div>
   </footer>
 </body>
+
 </html>
