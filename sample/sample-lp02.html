@@ -8,15 +8,15 @@
   <meta name="theme-color" content="#0b0d13" />
   <style>
     :root{
-      --bg:#0b0d13;          /* 深い黒紺 */
-      --panel:#0f1320;       /* パネル背景 */
-      --ink:#e9f1ff;         /* 文字色 */
-      --muted:#9aa7c1;       /* 補助文字 */
-      --line:#1b2540;        /* 罫線 */
-      --primary:#1ec9ff;     /* ネオンシアン */
-      --accent:#b300ff;      /* ネオンパープル */
-      --lime:#00ffd5;        /* ライムシアン */
-      --warning:#ffb000;     /* アンバー */
+      --bg:#0b0d13;          
+      --panel:#0f1320;       
+      --ink:#e9f1ff;         
+      --muted:#9aa7c1;       
+      --line:#1b2540;        
+      --primary:#1ec9ff;     
+      --accent:#b300ff;      
+      --lime:#00ffd5;        
+      --warning:#ffb000;     
       --radius:18px;
       --shadow:0 12px 40px rgba(0,0,0,.45);
       --glow:0 0 36px rgba(30,201,255,.35), 0 0 24px rgba(179,0,255,.25);
@@ -27,7 +27,7 @@
     a{color:var(--primary);text-decoration:none}
     .container{width:min(1160px,92%);margin-inline:auto}
 
-    /* ---------- Header ---------- */
+   
     header{position:sticky;top:0;z-index:1000;background:rgba(9,11,18,.6);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px}
@@ -37,7 +37,7 @@
     .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.02);color:var(--ink)}
     .btn.primary{background:linear-gradient(90deg,var(--primary),#7aa9ff);color:#02131c;border-color:transparent;font-weight:800;box-shadow:var(--glow)}
 
-    /* ---------- Hero ---------- */
+    
     .hero{position:relative;min-height:84vh;display:grid;place-items:center;overflow:hidden}
     .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(30,201,255,.12) 1px, transparent 1px),linear-gradient(90deg, rgba(179,0,255,.12) 1px, transparent 1px);background-size:40px 40px;opacity:.35}
     .hero-gradient{position:absolute;inset:-20% -10% auto -10%;height:80%;background:radial-gradient(60% 50% at 50% 0%, rgba(30,201,255,.25) 0%, rgba(0,0,0,0) 60%)}
@@ -52,27 +52,27 @@
     .dot:nth-child(2){background:#ffbd2e}
     .dot:nth-child(3){background:#28c840}
 
-    /* ---------- Sections ---------- */
+    
     section{position:relative;padding:80px 0;border-top:1px solid rgba(255,255,255,.06)}
     .section-title{font-size:28px;margin:0 0 8px}
     .section-lead{color:var(--muted);margin:0 0 26px}
 
-    /* ---------- Highlights ---------- */
+   
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.06));box-shadow:var(--shadow)}
     .card h3{margin:0 0 8px;font-size:18px}
     .card p{margin:0;color:var(--muted)}
 
-    /* ---------- Feature/Solution ---------- */
+    
     .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
     .bullet{display:flex;gap:12px;margin:10px 0}
     .bullet b{min-width:110px;display:inline-grid;place-items:center;padding:6px 12px;border-radius:999px;background:rgba(179,0,255,.14);border:1px solid rgba(179,0,255,.35)}
 
-    /* ---------- Logo row / social proof ---------- */
+   
     .logo-row{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;opacity:.85}
     .logo-cell{border:1px dashed rgba(255,255,255,.12);border-radius:12px;display:grid;place-items:center;padding:14px;color:#cdd7ef}
 
-    /* ---------- Pricing / Plans ---------- */
+   
     .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .plan{border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.08));box-shadow:var(--shadow)}
     .plan h3{margin:0 0 6px}
@@ -80,27 +80,27 @@
     .plan ul{margin:0;padding-left:18px;color:var(--muted)}
     .plan .cta-mini{margin-top:14px;display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.09)}
 
-    /* ---------- Compare ---------- */
+    
     .table{width:100%;border-collapse:separate;border-spacing:0}
     .table th,.table td{border:1px solid rgba(255,255,255,.08);padding:12px 14px}
     .table th{background:rgba(30,201,255,.08);text-align:left}
 
-    /* ---------- Steps ---------- */
+    
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .step{border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.06))}
     .step .num{font-weight:800;color:var(--lime)}
 
-    /* ---------- FAQ ---------- */
+    
     details{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.02)}
     details+details{margin-top:10px}
     summary{cursor:pointer;font-weight:700}
 
-    /* ---------- CTA ---------- */
+   
     .cta-box{border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.08));box-shadow:var(--shadow)}
 
     footer{padding:48px 0;color:#8fa0bf}
 
-    /* ---------- Responsive ---------- */
+    
     @media (max-width:980px){
       .hero-inner,.feature{grid-template-columns:1fr}
       .logo-row{grid-template-columns:repeat(3,1fr)}
@@ -124,7 +124,7 @@
     </div>
   </header>
 
-  <!-- ---------- Hero ---------- -->
+ 
   <section class="hero" id="top">
     <div class="grid-bg" aria-hidden="true"></div>
     <div class="hero-gradient" aria-hidden="true"></div>
@@ -147,7 +147,7 @@
     </div>
   </section>
 
-  <!-- ---------- Highlights / Problems ---------- -->
+ 
   <section id="problems">
     <div class="container">
       <h2 class="section-title">導入が進まない、本当の理由。</h2>
@@ -160,7 +160,7 @@
     </div>
   </section>
 
-  <!-- ---------- Solution / Feature ---------- -->
+ 
   <section id="solution">
     <div class="container feature">
       <div>
@@ -176,7 +176,7 @@
     </div>
   </section>
 
-  <!-- ---------- Logos / Social proof ---------- -->
+ 
   <section id="social-proof">
     <div class="container">
       <h2 class="section-title">信頼される理由</h2>
@@ -192,7 +192,7 @@
     </div>
   </section>
 
-  <!-- ---------- Pricing ---------- -->
+  
   <section id="pricing">
     <div class="container">
       <h2 class="section-title">プランと料金</h2>
@@ -232,7 +232,7 @@
     </div>
   </section>
 
-  <!-- ---------- Compare ---------- -->
+  
   <section id="compare">
     <div class="container">
       <h2 class="section-title">比較：汎用サイト vs 最適化LP</h2>
@@ -265,7 +265,7 @@
     </div>
   </section>
 
-  <!-- ---------- Steps ---------- -->
+ 
   <section id="process">
     <div class="container">
       <h2 class="section-title">導入までの流れ</h2>
@@ -279,7 +279,7 @@
     </div>
   </section>
 
-  <!-- ---------- FAQ ---------- -->
+  
   <section id="faq">
     <div class="container">
       <h2 class="section-title">よくある質問</h2>
@@ -298,7 +298,7 @@
     </div>
   </section>
 
-  <!-- ---------- CTA ---------- -->
+  
   <section id="contact">
     <div class="container">
       <div class="cta-box">
@@ -324,7 +324,7 @@
   </footer>
 
   <script>
-    // スムーススクロール（reduced motionに配慮）
+    
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
@@ -337,4 +337,5 @@
     });
   </script>
 </body>
+
 </html>
